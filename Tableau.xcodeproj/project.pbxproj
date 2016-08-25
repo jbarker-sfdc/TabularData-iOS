@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D706CF61D6E9D7B00BA79D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706CF51D6E9D7B00BA79D3 /* AppDelegate.swift */; };
+		4D706CF81D6E9D7B00BA79D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706CF71D6E9D7B00BA79D3 /* ViewController.swift */; };
+		4D706CFB1D6E9D7B00BA79D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D706CF91D6E9D7B00BA79D3 /* Main.storyboard */; };
+		4D706CFE1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D706CFC1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld */; };
+		4D706D001D6E9D7B00BA79D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D706CFF1D6E9D7B00BA79D3 /* Assets.xcassets */; };
+		4D706D031D6E9D7B00BA79D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D011D6E9D7B00BA79D3 /* LaunchScreen.storyboard */; };
+		4D706D0B1D6E9D9600BA79D3 /* TabularDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D0A1D6E9D9600BA79D3 /* TabularDataViewController.swift */; };
+		4D706D0E1D6E9EB600BA79D3 /* TabularDataRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D0D1D6E9EB600BA79D3 /* TabularDataRowView.swift */; };
+		4D706D101D6F110A00BA79D3 /* TabularDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D0F1D6F110A00BA79D3 /* TabularDataCell.swift */; };
+		4D706D121D6F135200BA79D3 /* TabularDataRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D111D6F135200BA79D3 /* TabularDataRowView.xib */; };
+		4D706D141D6F273200BA79D3 /* TabularDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D131D6F273200BA79D3 /* TabularDataCell.xib */; };
+		4D706D161D6F346700BA79D3 /* TabularDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D151D6F346700BA79D3 /* TabularDataHeaderView.swift */; };
+		4D706D191D6F375900BA79D3 /* TabularDataHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */; };
+		4D706D1A1D6F375900BA79D3 /* TabularDataHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D706CF21D6E9D7B00BA79D3 /* Tableau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tableau.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D706CF51D6E9D7B00BA79D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D706CF71D6E9D7B00BA79D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D706CFA1D6E9D7B00BA79D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D706CFD1D6E9D7B00BA79D3 /* Tableau.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tableau.xcdatamodel; sourceTree = "<group>"; };
+		4D706CFF1D6E9D7B00BA79D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D706D021D6E9D7B00BA79D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D706D041D6E9D7B00BA79D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D706D0A1D6E9D9600BA79D3 /* TabularDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataViewController.swift; sourceTree = "<group>"; };
+		4D706D0D1D6E9EB600BA79D3 /* TabularDataRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataRowView.swift; sourceTree = "<group>"; };
+		4D706D0F1D6F110A00BA79D3 /* TabularDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataCell.swift; sourceTree = "<group>"; };
+		4D706D111D6F135200BA79D3 /* TabularDataRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabularDataRowView.xib; sourceTree = "<group>"; };
+		4D706D131D6F273200BA79D3 /* TabularDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabularDataCell.xib; sourceTree = "<group>"; };
+		4D706D151D6F346700BA79D3 /* TabularDataHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataHeaderView.swift; sourceTree = "<group>"; };
+		4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataHeaderCell.swift; sourceTree = "<group>"; };
+		4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabularDataHeaderCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D706CEF1D6E9D7B00BA79D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D706CE91D6E9D7B00BA79D3 = {
+			isa = PBXGroup;
+			children = (
+				4D706CF41D6E9D7B00BA79D3 /* Tableau */,
+				4D706CF31D6E9D7B00BA79D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D706CF31D6E9D7B00BA79D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D706CF21D6E9D7B00BA79D3 /* Tableau.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D706CF41D6E9D7B00BA79D3 /* Tableau */ = {
+			isa = PBXGroup;
+			children = (
+				4D706CF51D6E9D7B00BA79D3 /* AppDelegate.swift */,
+				4D706CF71D6E9D7B00BA79D3 /* ViewController.swift */,
+				4D706D0C1D6E9E8500BA79D3 /* Tabular Data */,
+				4D706CF91D6E9D7B00BA79D3 /* Main.storyboard */,
+				4D706CFF1D6E9D7B00BA79D3 /* Assets.xcassets */,
+				4D706D011D6E9D7B00BA79D3 /* LaunchScreen.storyboard */,
+				4D706D041D6E9D7B00BA79D3 /* Info.plist */,
+				4D706CFC1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld */,
+			);
+			path = Tableau;
+			sourceTree = "<group>";
+		};
+		4D706D0C1D6E9E8500BA79D3 /* Tabular Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D706D0A1D6E9D9600BA79D3 /* TabularDataViewController.swift */,
+				4D706D151D6F346700BA79D3 /* TabularDataHeaderView.swift */,
+				4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */,
+				4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */,
+				4D706D0D1D6E9EB600BA79D3 /* TabularDataRowView.swift */,
+				4D706D111D6F135200BA79D3 /* TabularDataRowView.xib */,
+				4D706D0F1D6F110A00BA79D3 /* TabularDataCell.swift */,
+				4D706D131D6F273200BA79D3 /* TabularDataCell.xib */,
+			);
+			name = "Tabular Data";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D706CF11D6E9D7B00BA79D3 /* Tableau */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D706D071D6E9D7B00BA79D3 /* Build configuration list for PBXNativeTarget "Tableau" */;
+			buildPhases = (
+				4D706CEE1D6E9D7B00BA79D3 /* Sources */,
+				4D706CEF1D6E9D7B00BA79D3 /* Frameworks */,
+				4D706CF01D6E9D7B00BA79D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tableau;
+			productName = Tableau;
+			productReference = 4D706CF21D6E9D7B00BA79D3 /* Tableau.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D706CEA1D6E9D7B00BA79D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jason Barker";
+				TargetAttributes = {
+					4D706CF11D6E9D7B00BA79D3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 4D706CED1D6E9D7B00BA79D3 /* Build configuration list for PBXProject "Tableau" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D706CE91D6E9D7B00BA79D3;
+			productRefGroup = 4D706CF31D6E9D7B00BA79D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D706CF11D6E9D7B00BA79D3 /* Tableau */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D706CF01D6E9D7B00BA79D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D706D031D6E9D7B00BA79D3 /* LaunchScreen.storyboard in Resources */,
+				4D706D141D6F273200BA79D3 /* TabularDataCell.xib in Resources */,
+				4D706D1A1D6F375900BA79D3 /* TabularDataHeaderCell.xib in Resources */,
+				4D706D001D6E9D7B00BA79D3 /* Assets.xcassets in Resources */,
+				4D706CFB1D6E9D7B00BA79D3 /* Main.storyboard in Resources */,
+				4D706D121D6F135200BA79D3 /* TabularDataRowView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D706CEE1D6E9D7B00BA79D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D706D0B1D6E9D9600BA79D3 /* TabularDataViewController.swift in Sources */,
+				4D706CF81D6E9D7B00BA79D3 /* ViewController.swift in Sources */,
+				4D706D0E1D6E9EB600BA79D3 /* TabularDataRowView.swift in Sources */,
+				4D706D101D6F110A00BA79D3 /* TabularDataCell.swift in Sources */,
+				4D706D191D6F375900BA79D3 /* TabularDataHeaderCell.swift in Sources */,
+				4D706CF61D6E9D7B00BA79D3 /* AppDelegate.swift in Sources */,
+				4D706CFE1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld in Sources */,
+				4D706D161D6F346700BA79D3 /* TabularDataHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D706CF91D6E9D7B00BA79D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D706CFA1D6E9D7B00BA79D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D706D011D6E9D7B00BA79D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D706D021D6E9D7B00BA79D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D706D051D6E9D7B00BA79D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4D706D061D6E9D7B00BA79D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D706D081D6E9D7B00BA79D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tableau/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = salesforce.Tableau;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4D706D091D6E9D7B00BA79D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tableau/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = salesforce.Tableau;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D706CED1D6E9D7B00BA79D3 /* Build configuration list for PBXProject "Tableau" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D706D051D6E9D7B00BA79D3 /* Debug */,
+				4D706D061D6E9D7B00BA79D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D706D071D6E9D7B00BA79D3 /* Build configuration list for PBXNativeTarget "Tableau" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D706D081D6E9D7B00BA79D3 /* Debug */,
+				4D706D091D6E9D7B00BA79D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D706CFC1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D706CFD1D6E9D7B00BA79D3 /* Tableau.xcdatamodel */,
+			);
+			currentVersion = 4D706CFD1D6E9D7B00BA79D3 /* Tableau.xcdatamodel */;
+			path = Tableau.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D706CEA1D6E9D7B00BA79D3 /* Project object */;
+}
