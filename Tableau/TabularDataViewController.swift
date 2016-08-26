@@ -10,6 +10,8 @@ import UIKit
 
 protocol TabularDataDelegate: class {
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, didChangeSortOrder sortOrder: SortOrder, forColumnAtIndex index: Int)
+    func tabularDataViewController(tabularDataViewController: TabularDataViewController, numberOfRowsInSection section: Int) -> Int
+    func tabularDataViewController(tabularDataViewController: TabularDataViewController, dataForItemAtIndexPath indexPath: NSIndexPath) -> AnyObject?
 }
 
 class TabularDataViewController: UITableViewController {
@@ -17,7 +19,6 @@ class TabularDataViewController: UITableViewController {
     weak var delegate: TabularDataDelegate?
     
     var numberOfColumns: Int { return columnAttributes.count }
-    var data: [AnyObject]?
     var columnAttributes = [TabularDataColumnAttributes]() { didSet { resetTableHeader() } }
     var headerView: UIView?
     
@@ -28,7 +29,7 @@ class TabularDataViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data?.count ?? 0
+        return delegate?.tabularDataViewController(self, numberOfRowsInSection: section) ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -39,7 +40,7 @@ class TabularDataViewController: UITableViewController {
         }
         
         for i in 0..<numberOfColumns {
-            configureColumnAtIndex(i, inRow: row!, forIndexPath: indexPath)
+            configureColumnInRow(row!, forIndexPath: indexPath.indexPathWithColumn(i))
         }
         
         return row!
@@ -53,10 +54,11 @@ class TabularDataViewController: UITableViewController {
         return headerView
     }
     
-    func configureColumnAtIndex(columnIndex: Int, inRow row: TabularDataRowView, forIndexPath indexPath: NSIndexPath) {
-        let columnCell = row.cellForColumnIndex(columnIndex)
+    func configureColumnInRow(row: TabularDataRowView, forIndexPath indexPath: NSIndexPath) {
+        let columnCell = row.cellForColumnIndex(indexPath.column)
         if let tabularDataCell = columnCell as? TabularDataCell {
-            tabularDataCell.configureCellWithData?(cell: tabularDataCell, data: data![indexPath.row])
+            let data = delegate?.tabularDataViewController(self, dataForItemAtIndexPath: indexPath)
+            tabularDataCell.configureCellWithData?(cell: tabularDataCell, data: data)
         }
     }
     
@@ -101,5 +103,5 @@ class TabularDataColumnAttributes {
     
     var cellNibName: String?
     var configureCellUI: ((cell: TabularDataCell) -> ())?
-    var configureCellWithData: ((cell: TabularDataCell, data: AnyObject) -> ())?
+    var configureCellWithData: ((cell: TabularDataCell, data: AnyObject?) -> ())?
 }

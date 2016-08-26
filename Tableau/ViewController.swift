@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tabularDataView: UITableView!
     
     let tabularDataViewController = TabularDataViewController()
+    var data: [[AnyObject]] = ViewController.generateMoreData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,6 @@ class ViewController: UIViewController {
         tabularDataView.backgroundColor = UIColor.clearColor()
         tabularDataViewController.delegate = self
         tabularDataViewController.columnAttributes = getColumnAttributes()
-//        tabularDataViewController.data = generateMoreData()
-        tabularDataViewController.data = generateData()
     }
     
     func getColumnAttributes() -> [TabularDataColumnAttributes] {
@@ -42,8 +41,8 @@ class ViewController: UIViewController {
         column0.sortable = true
         column0.selected = true
         column0.configureCellWithData = { (cell, data) in
-            if let data = data as? [String] {
-                cell.label.text = data[0]
+            if let data = data as? String {
+                cell.label.text = data
             }
         }
         
@@ -56,8 +55,8 @@ class ViewController: UIViewController {
 //            cell.label.textAlignment = .Right
 //        }
         column1.configureCellWithData = { (cell, data) in
-            if let data = data as? [String] {
-                cell.label.text = data[1]
+            if let data = data as? String {
+                cell.label.text = data
             }
         }
         
@@ -65,15 +64,15 @@ class ViewController: UIViewController {
         column2.title = "Column 2"
         column2.width = 200
         column2.configureCellWithData = { (cell, data) in
-            if let data = data as? [String] {
-                cell.label.text = data[2]
+            if let data = data as? String {
+                cell.label.text = data
             }
         }
         
         return [column0, column1, column2]
     }
     
-    func generateData() -> [[AnyObject]] {
+    class func generateData() -> [[AnyObject]] {
         let d0 = ["User 1", "Green", "Alpha"]
         let d1 = ["User 2", "Orange", "Beta"]
         let d2 = ["User 3", "Pink", "Gamma"]
@@ -84,7 +83,7 @@ class ViewController: UIViewController {
         return [d0, d1, d2, d3, d4, d5]
     }
     
-    func generateMoreData() -> [[AnyObject]] {
+    class func generateMoreData() -> [[AnyObject]] {
         var data = [[AnyObject]]()
         for _ in 0...20 {
             data.appendContentsOf(generateData())
@@ -99,5 +98,14 @@ extension ViewController: TabularDataDelegate {
     
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, didChangeSortOrder sortOrder: SortOrder, forColumnAtIndex index: Int) {
         print("You selected column \(index) [sortOrder=\(sortOrder)]")
+    }
+    
+    func tabularDataViewController(tabularDataViewController: TabularDataViewController, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tabularDataViewController(tabularDataViewController: TabularDataViewController, dataForItemAtIndexPath indexPath: NSIndexPath) -> AnyObject? {
+        let item: [String] = data[indexPath.row] as! [String]
+        return item[indexPath.column]
     }
 }

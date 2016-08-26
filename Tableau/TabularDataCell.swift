@@ -13,5 +13,5 @@ class TabularDataCell: UIView {
     @IBOutlet weak var label: UILabel!
     
     var configureUI: ((cell: TabularDataCell) -> ())?
-    var configureCellWithData: ((cell: TabularDataCell, data: AnyObject) -> ())?
+    var configureCellWithData: ((cell: TabularDataCell, data: AnyObject?) -> ())?
 }

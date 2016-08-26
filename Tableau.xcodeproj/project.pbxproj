@@ -21,6 +21,7 @@
 		4D706D161D6F346700BA79D3 /* TabularDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D151D6F346700BA79D3 /* TabularDataHeaderView.swift */; };
 		4D706D191D6F375900BA79D3 /* TabularDataHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */; };
 		4D706D1A1D6F375900BA79D3 /* TabularDataHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */; };
+		4D706D1C1D6FCAF900BA79D3 /* NSIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4D706D151D6F346700BA79D3 /* TabularDataHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataHeaderView.swift; sourceTree = "<group>"; };
 		4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataHeaderCell.swift; sourceTree = "<group>"; };
 		4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabularDataHeaderCell.xib; sourceTree = "<group>"; };
+		4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSIndexPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				4D706D111D6F135200BA79D3 /* TabularDataRowView.xib */,
 				4D706D0F1D6F110A00BA79D3 /* TabularDataCell.swift */,
 				4D706D131D6F273200BA79D3 /* TabularDataCell.xib */,
+				4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */,
 			);
 			name = "Tabular Data";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D706D1C1D6FCAF900BA79D3 /* NSIndexPath.swift in Sources */,
 				4D706D0B1D6E9D9600BA79D3 /* TabularDataViewController.swift in Sources */,
 				4D706CF81D6E9D7B00BA79D3 /* ViewController.swift in Sources */,
 				4D706D0E1D6E9EB600BA79D3 /* TabularDataRowView.swift in Sources */,
@@ -332,6 +336,7 @@
 				4D706D091D6E9D7B00BA79D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
