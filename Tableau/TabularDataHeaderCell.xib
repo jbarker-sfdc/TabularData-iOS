@@ -11,42 +11,52 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-ZE-9KK">
-                    <rect key="frame" x="8" y="2" width="42" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="ymx-eN-2bm"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-QY-a2s">
-                    <rect key="frame" x="54" y="12" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="dSy-ed-GGE"/>
-                        <constraint firstAttribute="height" constant="20" id="xyv-6K-RGg"/>
-                    </constraints>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ILR-iH-8PN">
+                    <rect key="frame" x="8" y="11" width="80" height="21"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_small_white_down" translatesAutoresizingMaskIntoConstraints="NO" id="fIg-VF-QqD">
+                            <rect key="frame" x="0.0" y="7" width="11" height="7"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="7" id="WbU-C1-eFZ"/>
+                                <constraint firstAttribute="width" constant="11" id="eX1-0O-ASR"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-ZE-9KK">
+                            <rect key="frame" x="19" y="0.0" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_small_white_up" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-QY-a2s">
+                            <rect key="frame" x="69" y="7" width="11" height="7"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="11" id="Ek2-eK-AYp"/>
+                                <constraint firstAttribute="height" constant="7" id="wtE-7L-w5y"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.68400932149040572" green="0.97168117105272556" blue="1" alpha="0.8958610372070922" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="MoK-ZE-9KK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="5uH-IL-MEo"/>
-                <constraint firstAttribute="bottom" secondItem="MoK-ZE-9KK" secondAttribute="bottom" constant="2" id="8Wm-ok-GkT"/>
-                <constraint firstItem="MoK-ZE-9KK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Kod-kQ-0qX"/>
-                <constraint firstItem="hgF-QY-a2s" firstAttribute="centerY" secondItem="MoK-ZE-9KK" secondAttribute="centerY" id="Rqs-KQ-6ak"/>
-                <constraint firstItem="hgF-QY-a2s" firstAttribute="leading" secondItem="MoK-ZE-9KK" secondAttribute="trailing" constant="4" id="Yov-qa-ga9"/>
+                <constraint firstItem="ILR-iH-8PN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="byT-0F-YYk"/>
+                <constraint firstItem="ILR-iH-8PN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" placeholder="YES" id="oJs-L1-bmi"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="contentView" destination="ILR-iH-8PN" id="HCJ-mr-pK0"/>
                 <outlet property="label" destination="MoK-ZE-9KK" id="eCY-2E-QsX"/>
-                <outlet property="labelHorizontalPosition" destination="Kod-kQ-0qX" id="nXF-UE-z8P"/>
-                <outlet property="sortIcon" destination="hgF-QY-a2s" id="2nb-GM-Mix"/>
-                <outlet property="sortIconHorizontalPosition" destination="Yov-qa-ga9" id="PPu-G9-vQL"/>
+                <outlet property="leftSortIcon" destination="fIg-VF-QqD" id="vLH-2O-3UC"/>
+                <outlet property="rightSortIcon" destination="hgF-QY-a2s" id="NVm-sy-fBJ"/>
             </connections>
             <point key="canvasLocation" x="461" y="247"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow_small_white_down" width="22" height="14"/>
+        <image name="arrow_small_white_up" width="22" height="14"/>
+    </resources>
 </document>

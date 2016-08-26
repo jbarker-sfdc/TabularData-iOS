@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         column1.title = "Column 1"
         column1.width = 100
         column1.sortable = true
-        column1.contentAlignment = .Right
+        column1.contentAlignment = .Center
 //        column1.configureCellUI = { (cell) in
 //            cell.label.textAlignment = .Right
 //        }
@@ -63,6 +63,8 @@ class ViewController: UIViewController {
         let column2 = TabularDataColumnAttributes()
         column2.title = "Column 2"
         column2.width = 200
+        column2.contentAlignment = .Right
+        column2.sortable = true
         column2.configureCellWithData = { (cell, data) in
             if let data = data as? String {
                 cell.label.text = data

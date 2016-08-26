@@ -14,21 +14,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-jt-wgI">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-2t-oRS" userLabel="Row Wrapper View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="38.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-Py-mrb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iyd-Py-mrb" secondAttribute="bottom" id="331-Zd-NpJ"/>
+                            <constraint firstAttribute="trailing" secondItem="iyd-Py-mrb" secondAttribute="trailing" id="84e-2e-jZD"/>
+                            <constraint firstItem="iyd-Py-mrb" firstAttribute="leading" secondItem="O3v-2t-oRS" secondAttribute="leading" id="A2d-Jd-PDN"/>
+                            <constraint firstItem="iyd-Py-mrb" firstAttribute="top" secondItem="O3v-2t-oRS" secondAttribute="top" id="ELy-Uv-2vp"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OBn-jt-wgI" firstAttribute="leading" secondItem="iDT-Mp-ndH" secondAttribute="leading" id="7H0-jK-x7k"/>
-                    <constraint firstAttribute="bottom" secondItem="OBn-jt-wgI" secondAttribute="bottom" constant="5" id="Iam-vE-D30"/>
-                    <constraint firstAttribute="trailing" secondItem="OBn-jt-wgI" secondAttribute="trailing" id="OJf-ev-LhB"/>
-                    <constraint firstItem="OBn-jt-wgI" firstAttribute="top" secondItem="iDT-Mp-ndH" secondAttribute="top" id="o3o-ON-qWn"/>
+                    <constraint firstAttribute="bottom" secondItem="O3v-2t-oRS" secondAttribute="bottom" constant="5" id="AhH-uT-9AP"/>
+                    <constraint firstItem="O3v-2t-oRS" firstAttribute="leading" secondItem="iDT-Mp-ndH" secondAttribute="leading" id="GHu-ji-tjz"/>
+                    <constraint firstAttribute="trailing" secondItem="O3v-2t-oRS" secondAttribute="trailing" id="KoT-Wl-uRh"/>
+                    <constraint firstItem="O3v-2t-oRS" firstAttribute="top" secondItem="iDT-Mp-ndH" secondAttribute="top" id="j5J-Lv-2XQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="bottomInset" destination="Iam-vE-D30" id="33q-Gb-hr4"/>
-                <outlet property="rowView" destination="OBn-jt-wgI" id="6fp-qr-Rdg"/>
+                <outlet property="rowView" destination="iyd-Py-mrb" id="yCT-o9-izU"/>
             </connections>
             <point key="canvasLocation" x="641" y="309"/>
         </tableViewCell>

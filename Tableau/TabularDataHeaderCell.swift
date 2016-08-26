@@ -16,20 +16,21 @@ enum SortOrder {
 class TabularDataHeaderCell: UIView {
     
     struct defaults {
-        static var horizontalGap: CGFloat = 4
         static var leftInset: CGFloat = 8
-        static var rightInset: CGFloat = 8
+        static var rightInset: CGFloat = -8
     }
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var labelHorizontalPosition: NSLayoutConstraint!
-    @IBOutlet weak var sortIcon: UIImageView!
-    @IBOutlet weak var sortIconHorizontalPosition: NSLayoutConstraint!
+    @IBOutlet weak var leftSortIcon: UIImageView!
+    @IBOutlet weak var rightSortIcon: UIImageView!
+    @IBOutlet weak var contentView: UIStackView!
     
-    var textAlignment: NSTextAlignment = .Left { didSet { configureTitleLabel() } }
+    var contentAlignment: TabularDataContentAlignment = .Left { didSet { configureUI() } }
     var sortable: Bool = false { didSet { configureUI() } }
     var selected: Bool = false { didSet { configureUI() } }
-    var sortOrder: SortOrder = .Ascending { didSet { configureSortIconImage() } }
+    var sortOrder: SortOrder = .Ascending { didSet { configureUI() } }
+    
+    private var temporaryConstraints = [NSLayoutConstraint]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,80 +51,62 @@ class TabularDataHeaderCell: UIView {
     }
     
     func configureUI() {
-        configureTitleLabel()
-        configureSortIcon()
-    }
-    
-    func configureTitleLabel() {
-        var attribute: NSLayoutAttribute = .Left
-        var horizontalOffset: CGFloat = defaults.leftInset
+        var font = normalFont()
+        var hideLeftIcon = true
+        var hideRightIcon = true
         
-        if textAlignment == .Right {
-            attribute = .Right
-            horizontalOffset = defaults.rightInset
-            if sortable && selected {
-                horizontalOffset += defaults.horizontalGap + CGRectGetWidth(sortIcon.bounds)
-            }
-        }
-        else if textAlignment == .Center {
-            attribute = .CenterX
-            if sortable && selected {
-                horizontalOffset = (defaults.horizontalGap + CGRectGetWidth(sortIcon.bounds)) / 2
-            }
-            else {
-                horizontalOffset = 0
-            }
-        }
-        
-        label.font = (sortable && selected) ? boldFont() : normalFont()
-        
-        if labelHorizontalPosition != nil {
-            removeConstraint(labelHorizontalPosition!)
-        }
-        
-        labelHorizontalPosition = NSLayoutConstraint(item: label, attribute: attribute, relatedBy: .Equal, toItem: self, attribute: attribute, multiplier: 1, constant: horizontalOffset)
-        addConstraint(labelHorizontalPosition)
-    }
-    
-    func configureSortIcon() {
         if sortable && selected {
+            font = boldFont()
             configureSortIconImage()
-            sortIcon.hidden = false
             
-            var firstAttribute: NSLayoutAttribute = .Left
-            var secondItem: UIView = label
-            var secondAttribute: NSLayoutAttribute = .Right
-            var gap: CGFloat = defaults.horizontalGap
-            
-            if textAlignment == .Right {
-                firstAttribute = .Right
-                secondAttribute = .Left
+            switch contentAlignment {
+            case .Left:
+                hideRightIcon = false
+            case .Center:
+                hideRightIcon = false
+            case .Right:
+                hideLeftIcon = false
             }
-            else if textAlignment == .Center {
-                firstAttribute = .CenterX
-                secondItem = self
-                gap = 0
-            }
-            
-            if sortIconHorizontalPosition != nil {
-                removeConstraint(sortIconHorizontalPosition)
-            }
-            
-            sortIconHorizontalPosition = NSLayoutConstraint(item: sortIcon, attribute: firstAttribute, relatedBy: .Equal, toItem: secondItem, attribute: secondAttribute, multiplier: 1, constant: gap)
-            addConstraint(sortIconHorizontalPosition)
         }
-        else {
-            sortIcon.hidden = true
+        
+        removeConstraints(temporaryConstraints)
+        temporaryConstraints.removeAll()
+        
+        if contentAlignment == .Left {
+            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1, constant: defaults.leftInset))
+//            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Right, relatedBy: .GreaterThanOrEqual, toItem: self, attribute: .Right, multiplier: 1, constant: defaults.rightInset))
         }
+        else if contentAlignment == .Center {
+            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
+        }
+        else if contentAlignment == .Right {
+//            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Left, relatedBy: .GreaterThanOrEqual, toItem: self, attribute: .Left, multiplier: 1, constant: defaults.leftInset))
+            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: defaults.rightInset))
+        }
+        
+        addConstraints(temporaryConstraints)
+        
+        label.font = font
+        leftSortIcon.hidden = hideLeftIcon
+        rightSortIcon.hidden = hideRightIcon
     }
     
     func configureSortIconImage() {
-        sortIcon.image = getImageForSortOrder(sortOrder)
+        let image = getImageForSortOrder(sortOrder)
+        leftSortIcon.image = image
+        rightSortIcon.image = image
     }
     
     private func getImageForSortOrder(sortOrder: SortOrder) -> UIImage? {
-        print("TabularDataHeaderCell.getImageForSortOrder(_:)    ***  NEEDS IMPLEMENTATION  ***")
-        return nil
+        var imageName: String?
+        switch sortOrder {
+        case .Ascending:
+            imageName = "arrow_small_white_up"
+        case .Descending:
+            imageName = "arrow_small_white_down"
+        }
+        
+        return UIImage(named: imageName!)
     }
     
     func boldFont() -> UIFont {
