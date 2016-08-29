@@ -61,13 +61,14 @@ class ViewController: UIViewController {
         }
         
         let column2 = TabularDataColumnAttributes()
+        column2.cellNibName = "NumericDataCell"
         column2.title = "Column 2"
-        column2.width = 200
+        column2.width = 250
         column2.contentAlignment = .Right
         column2.sortable = true
         column2.configureCellWithData = { (cell, data) in
-            if let data = data as? String {
-                cell.label.text = data
+            if let data = data as? Double, cell = cell as? NumericDataCell {
+                cell.label.text = cell.numberFormatter.stringFromNumber(NSNumber(double: data))
             }
         }
         
@@ -75,12 +76,12 @@ class ViewController: UIViewController {
     }
     
     class func generateData() -> [[AnyObject]] {
-        let d0 = ["User 1", "Green", "Alpha"]
-        let d1 = ["User 2", "Orange", "Beta"]
-        let d2 = ["User 3", "Pink", "Gamma"]
-        let d3 = ["User 4", "Blue", "Delta"]
-        let d4 = ["User 5", "Yellow", "Epsilon"]
-        let d5 = ["User 6", "Red", "Zeta"]
+        let d0: [AnyObject] = ["User 1", "Green", Double(0.0)]
+        let d1: [AnyObject] = ["User 2", "Orange", Double(32)]
+        let d2: [AnyObject] = ["User 3", "Pink", Double(27)]
+        let d3: [AnyObject] = ["User 4", "Blue", Double(299)]
+        let d4: [AnyObject] = ["User 5", "Yellow", Double(0)]
+        let d5: [AnyObject] = ["User 6", "Red", Double(45)]
         
         return [d0, d1, d2, d3, d4, d5]
     }
@@ -107,7 +108,7 @@ extension ViewController: TabularDataDelegate {
     }
     
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, dataForItemAtIndexPath indexPath: NSIndexPath) -> AnyObject? {
-        let item: [String] = data[indexPath.row] as! [String]
+        let item = data[indexPath.row] as [AnyObject]
         return item[indexPath.column]
     }
 }
