@@ -12,6 +12,7 @@ protocol TabularDataDelegate: class {
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, didChangeSortOrder sortOrder: SortOrder, forColumnAtIndex index: Int)
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, numberOfRowsInSection section: Int) -> Int
     func tabularDataViewController(tabularDataViewController: TabularDataViewController, dataForItemAtIndexPath indexPath: NSIndexPath) -> AnyObject?
+    func tabularDataViewController(tabularDataViewController: TabularDataViewController, didSelectRowAtIndexPath indexPath: NSIndexPath)
 }
 
 class TabularDataViewController: UITableViewController {
@@ -52,6 +53,10 @@ class TabularDataViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return headerView
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        delegate?.tabularDataViewController(self, didSelectRowAtIndexPath: indexPath)
     }
     
     func configureColumnInRow(row: TabularDataRowView, forIndexPath indexPath: NSIndexPath) {

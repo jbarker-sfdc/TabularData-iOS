@@ -74,13 +74,11 @@ class TabularDataHeaderCell: UIView {
         
         if contentAlignment == .Left {
             temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1, constant: defaults.leftInset))
-//            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Right, relatedBy: .GreaterThanOrEqual, toItem: self, attribute: .Right, multiplier: 1, constant: defaults.rightInset))
         }
         else if contentAlignment == .Center {
             temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
         }
         else if contentAlignment == .Right {
-//            temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Left, relatedBy: .GreaterThanOrEqual, toItem: self, attribute: .Left, multiplier: 1, constant: defaults.leftInset))
             temporaryConstraints.append(NSLayoutConstraint(item: contentView, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: defaults.rightInset))
         }
         

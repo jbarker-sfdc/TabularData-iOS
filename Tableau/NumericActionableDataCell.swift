@@ -8,21 +8,25 @@
 
 import UIKit
 
-class NumericDataCell: TabularDataCell {
+class NumericActionableDataCell: TabularDataCell {
     
     let numberFormatter = NSNumberFormatter()
     
+    var actionHandler: ((cell: NumericActionableDataCell, data: AnyObject?) -> ())?
+    var actionData: AnyObject?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        numberFormatter.numberStyle = .CurrencyStyle
+        numberFormatter.numberStyle = .OrdinalStyle
         numberFormatter.generatesDecimalNumbers = false
-        numberFormatter.currencySymbol = "$"
-        numberFormatter.currencyCode = "USD"
+        numberFormatter.maximumFractionDigits = 0
     }
     
     @IBOutlet weak var actionButton: UIButton!
 
     @IBAction func performAction(sender: AnyObject) {
-        print("You tapped me")
+        if actionHandler != nil {
+            actionHandler!(cell: self, data: actionData)
+        }
     }
 }

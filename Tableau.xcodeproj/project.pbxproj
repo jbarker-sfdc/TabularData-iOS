@@ -22,8 +22,8 @@
 		4D706D191D6F375900BA79D3 /* TabularDataHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */; };
 		4D706D1A1D6F375900BA79D3 /* TabularDataHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */; };
 		4D706D1C1D6FCAF900BA79D3 /* NSIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */; };
-		4D706D221D74B37200BA79D3 /* NumericDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D211D74B37200BA79D3 /* NumericDataCell.swift */; };
-		4D706D241D74B38300BA79D3 /* NumericDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D231D74B38300BA79D3 /* NumericDataCell.xib */; };
+		4D706D221D74B37200BA79D3 /* NumericActionableDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D706D211D74B37200BA79D3 /* NumericActionableDataCell.swift */; };
+		4D706D241D74B38300BA79D3 /* NumericActionableDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D706D231D74B38300BA79D3 /* NumericActionableDataCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +44,8 @@
 		4D706D171D6F375900BA79D3 /* TabularDataHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataHeaderCell.swift; sourceTree = "<group>"; };
 		4D706D181D6F375900BA79D3 /* TabularDataHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabularDataHeaderCell.xib; sourceTree = "<group>"; };
 		4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSIndexPath.swift; sourceTree = "<group>"; };
-		4D706D211D74B37200BA79D3 /* NumericDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericDataCell.swift; sourceTree = "<group>"; };
-		4D706D231D74B38300BA79D3 /* NumericDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumericDataCell.xib; sourceTree = "<group>"; };
+		4D706D211D74B37200BA79D3 /* NumericActionableDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericActionableDataCell.swift; sourceTree = "<group>"; };
+		4D706D231D74B38300BA79D3 /* NumericActionableDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumericActionableDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 				4D706D111D6F135200BA79D3 /* TabularDataRowView.xib */,
 				4D706D0F1D6F110A00BA79D3 /* TabularDataCell.swift */,
 				4D706D131D6F273200BA79D3 /* TabularDataCell.xib */,
-				4D706D211D74B37200BA79D3 /* NumericDataCell.swift */,
-				4D706D231D74B38300BA79D3 /* NumericDataCell.xib */,
+				4D706D211D74B37200BA79D3 /* NumericActionableDataCell.swift */,
+				4D706D231D74B38300BA79D3 /* NumericActionableDataCell.xib */,
 				4D706D1B1D6FCAF900BA79D3 /* NSIndexPath.swift */,
 			);
 			name = "Tabular Data";
@@ -166,7 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D706D241D74B38300BA79D3 /* NumericDataCell.xib in Resources */,
+				4D706D241D74B38300BA79D3 /* NumericActionableDataCell.xib in Resources */,
 				4D706D031D6E9D7B00BA79D3 /* LaunchScreen.storyboard in Resources */,
 				4D706D141D6F273200BA79D3 /* TabularDataCell.xib in Resources */,
 				4D706D1A1D6F375900BA79D3 /* TabularDataHeaderCell.xib in Resources */,
@@ -192,7 +192,7 @@
 				4D706CF61D6E9D7B00BA79D3 /* AppDelegate.swift in Sources */,
 				4D706CFE1D6E9D7B00BA79D3 /* Tableau.xcdatamodeld in Sources */,
 				4D706D161D6F346700BA79D3 /* TabularDataHeaderView.swift in Sources */,
-				4D706D221D74B37200BA79D3 /* NumericDataCell.swift in Sources */,
+				4D706D221D74B37200BA79D3 /* NumericActionableDataCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,8 +17,8 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_small_white_down" translatesAutoresizingMaskIntoConstraints="NO" id="fIg-VF-QqD">
                             <rect key="frame" x="0.0" y="7" width="11" height="7"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="7" id="WbU-C1-eFZ"/>
-                                <constraint firstAttribute="width" constant="11" id="eX1-0O-ASR"/>
+                                <constraint firstAttribute="height" priority="999" constant="7" id="WbU-C1-eFZ"/>
+                                <constraint firstAttribute="width" priority="999" constant="11" id="eX1-0O-ASR"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-ZE-9KK">
@@ -30,8 +30,8 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_small_white_up" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-QY-a2s">
                             <rect key="frame" x="69" y="7" width="11" height="7"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="11" id="Ek2-eK-AYp"/>
-                                <constraint firstAttribute="height" constant="7" id="wtE-7L-w5y"/>
+                                <constraint firstAttribute="width" priority="999" constant="11" id="Ek2-eK-AYp"/>
+                                <constraint firstAttribute="height" priority="999" constant="7" id="wtE-7L-w5y"/>
                             </constraints>
                         </imageView>
                     </subviews>
